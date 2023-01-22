@@ -1,0 +1,3 @@
+[submodule "Bash-Cheat-Sheet"]
+	path = Bash-Cheat-Sheet
+	url = https://github.com/NasimMora/Bash-Cheat-Sheet.git
