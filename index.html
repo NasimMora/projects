@@ -8,13 +8,24 @@
   </head>
   <body></body>
 
-  <script>
-    document.write(navigator.appCodeName + "<br>")
-    document.write(navigator.product + "<br>")
-    document.write(navigator.appVersion + "<br>")
-    document.write(navigator.userAgent + "<br>")
-    document.write(navigator.platform + "<br>")
-    document.write(navigator.language + "<br>")
-    document.write(navigator.onLine + "<br>")
+  <script defer type="module">
+    /**
+     * document.write(navigator.appCodeName + "<br>")
+     * document.write не используется в данном случае из за  того что находишься 
+     * в модуле.
+     * Нельзя вызывать модуль в модуле
+     * https://stackoverflow.com/questions/24297829/execute-write-on-doc-it-isnt-possible-to-write-into-a-document-from-an-asynchr
+     */
+    import {docWrite} from "./user-agent.js"
+    const resWrite = docWrite()
+    console.log(resWrite)
+    document.body.innerHTML = resWrite
+    // document.body.innerHTML = sayHi('John');
+    // document.write(navigator.product + "<br>")
+    // document.write(navigator.appVersion + "<br>")
+    // document.write(navigator.userAgent + "<br>")
+    // document.write(navigator.platform + "<br>")
+    // document.write(navigator.language + "<br>")
+    // document.write(navigator.onLine + "<br>")
   </script>
 </html>
