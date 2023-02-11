@@ -1,3 +1,3 @@
 export function docWrite() {
- return (navigator.appCodeName + "<br>");
+  return navigator.appCodeName + "<br>"
 }
