@@ -31,6 +31,8 @@ Already up to date.
 
 ---
 
+## создание нового коммита
+
 добавляю файлы в зону staged
 (список файлов,которые будут добавлены в следущем commit)
 
@@ -59,4 +61,14 @@ jojo-@DESKTOP-AUSV2FP MINGW64 ~/git/projects (3/display-client-user-agent)
 $ git commit -m 'updated README.md'
 [3/display-client-user-agent 1638cc3] updated README.md
  1 file changed, 24 insertions(+)
+```
+```sh
+Вышла ошибка 'from origin 'null' has been blocked by CORS policy: Cross origin requests are only supported for protocol schemes: http, data, isolated-app, chrome-extension, chrome, https, chrome-untrusted.'
+Для решения проблемы начал искать эту ошибку в гугле и нашел ответ на этом сайте 'https://www.npmjs.com/package/serve' 
+устанавливаю npm пакет serve, который связывает с сервером node js.
+npm exec по умолчанию вызывает команду из 'node_modules/ .bin'(бинарный формат)
+ищу в 'node_modules\.bin\serve' 
+ищу в зависимости от платформы (Ос Linux/Windows) расширение  cmd(command line) ps1(powershell), если операционная система Linux, от запускаем файл без расширения
+далее щиу эту директорию "\..\serve\build\main.js"
+каждый из этих файлов запускает модуль node_modules\serve\build\main.js
 ```
