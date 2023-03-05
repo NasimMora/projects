@@ -1,8 +1,9 @@
 {
   "scripts": {
-    "serve": "serve"
+    "serve": "serve ."
   },
   "dependencies": {
-    "serve": "^14.2.0"
+    "serve": "^14.2.0",
+    "vue": "^3.2.47"
   }
 }

@@ -7,33 +7,40 @@
  */
 import { docWrite } from "./user-agent.js"
 const resWrite = docWrite()
-// console.log(resWrite)
+// import * as vue from "./node_modules/vue/dist/vue.cjs.prod"
 
-const headEl = document.querySelector(".head")
+createApp({
+  data() {
+    return {
+      message: 'Hello Vue 3!'
+    }
+  }
+}).mount('#app')
+// const headEl = document.querySelector(".head")
 
-// headEl.innerHTML = sayHi('John');
-// headEl.innerHTML = navigator.product + "<br>"
-headEl.insertAdjacentHTML(
-  "beforeend",
-  `<br>User App version: ${navigator.appVersion}`
-)
-headEl.insertAdjacentHTML(
-  "beforeend",
-  `<br>User Browser version: ${navigator.userAgent}`
-)
-headEl.insertAdjacentHTML(
-  "beforeend",
-  `<br>User Platform: ${navigator.platform}`
-)
-headEl.insertAdjacentHTML(
-  "beforeend",
-  `<br>User Language: ${navigator.language}`
-)
-headEl.insertAdjacentHTML(
-  "beforeend",
-  `<br>User is online: ${navigator.onLine}`
-)
-resWrite
+// // headEl.innerHTML = sayHi('John');
+// // headEl.innerHTML = navigator.product + "<br>"
+// headEl.insertAdjacentHTML(
+//   "beforeend",
+//   `<br>User App version: ${navigator.appVersion}`
+// )
+// headEl.insertAdjacentHTML(
+//   "beforeend",
+//   `<br>User Browser version: ${navigator.userAgent}`
+// )
+// headEl.insertAdjacentHTML(
+//   "beforeend",
+//   `<br>User Platform: ${navigator.platform}`
+// )
+// headEl.insertAdjacentHTML(
+//   "beforeend",
+//   `<br>User Language: ${navigator.language}`
+// )
+// headEl.insertAdjacentHTML(
+//   "beforeend",
+//   `<br>User is online: ${navigator.onLine}`
+// )
+// resWrite
 // headEl.innerHTML = navigator.appVersion + "<br>"
 // console.log(headEl.innerHTML)
 // headEl.innerHTML = navigator.userAgent + "<br>"
